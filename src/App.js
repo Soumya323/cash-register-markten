@@ -42,9 +42,10 @@ export default function App() {
   }
 
   return (
-    <div className="App">
-      <div className="body">
+    <div class="App">
+      <div class="body">
         <h1>Cash Resgister Manager</h1>
+        <p>Enter the bill amount and cash given by customer and know minimum number of notes to return.</p>
         <hr />
         <div>
           <h2>Bill Amount:</h2>
@@ -52,8 +53,8 @@ export default function App() {
             type="number"
             columns="20"
             rows="1"
-            placeholder="enter bill amount"
             onChange={onBillAmountChange}
+            class="input-field"
           ></input>
 
           <h2>Cash Given:</h2>
@@ -66,14 +67,29 @@ export default function App() {
             placeholder="enter cash given"
             disabled={isBillEmpty}
             onChange={onCashAmountChange}
-          ></input>
+            class="input-field"
+       ></input>
 
           <button onClick={onCheck}>Check</button>
 
           <h2>Return Change</h2>
 
-          <ChangeTable returnAmounts={returnChange} />
+          <ChangeTable returnAmounts={returnChange} />  
         </div>
+
+        <footer>
+          <p>
+           2023 | soumya ripan
+          </p>
+
+          <ul>
+            <li><a href="/"><img src="images/github.png" alt="github"></img></a></li>
+            <li><a href="/"><img src="images/instagram.png" alt="instagram"></img></a></li>
+            <li><a href="/"><img src="images/twitter.png" alt="twitter"></img></a></li>
+          </ul>
+
+        </footer>
+
       </div>
     </div>
   );
@@ -81,30 +97,32 @@ export default function App() {
 
 function ChangeTable(props) {
   return (
+    <div class="table-parent">
     <table>
       <tr>
-        <td className="table-cell">No of Notes</td>
-        <td className="table-cell">{props.returnAmounts[0]}</td>
-        <td className="table-cell">{props.returnAmounts[1]}</td>
-        <td className="table-cell">{props.returnAmounts[2]}</td>
-        <td className="table-cell">{props.returnAmounts[3]}</td>
-        <td className="table-cell">{props.returnAmounts[4]}</td>
-        <td className="table-cell">{props.returnAmounts[5]}</td>
-        <td className="table-cell">{props.returnAmounts[6]}</td>
-        <td className="table-cell">{props.returnAmounts[7]}</td>
+        <td class="table-cell">No of Notes</td>
+        <td class="table-cell">{props.returnAmounts[0]}</td>
+        <td class="table-cell">{props.returnAmounts[1]}</td>
+        <td class="table-cell">{props.returnAmounts[2]}</td>
+        <td class="table-cell">{props.returnAmounts[3]}</td>
+        <td class="table-cell">{props.returnAmounts[4]}</td>
+        <td class="table-cell">{props.returnAmounts[5]}</td>
+        <td class="table-cell">{props.returnAmounts[6]}</td>
+        <td class="table-cell">{props.returnAmounts[7]}</td>
       </tr>
       <tr>
-        <td className="table-cell">Note</td>
-        <td className="table-cell">2000</td>
-        <td className="table-cell">500</td>
-        <td className="table-cell">100</td>
-        <td className="table-cell">50</td>
-        <td className="table-cell">20</td>
-        <td className="table-cell">10</td>
-        <td className="table-cell">5</td>
-        <td className="table-cell">1</td>
+        <td class="table-cell">Note</td>
+        <td class="table-cell">2000</td>
+        <td class="table-cell">500</td>
+        <td class="table-cell">100</td>
+        <td class="table-cell">50</td>
+        <td class="table-cell">20</td>
+        <td class="table-cell">10</td>
+        <td class="table-cell">5</td>
+        <td class="table-cell">1</td>
       </tr>
     </table>
+    </div>
   );
 }
 
