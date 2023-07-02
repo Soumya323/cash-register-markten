@@ -6,29 +6,29 @@
 }
 
 :root {
-  --primary-Color:#7371fc;
+  --primary-Color: #7371fc;
 }
 
-.App h1{
-  color:var(--primary-Color);
+.App h1 {
+  color: var(--primary-Color);
   font-family: 'Roboto', sans-serif;
 }
 
-.input-field
-{
+.input-field {
   border: 2px solid var(--primary-Color);
   /* border-style: none; */
   border-radius: 0.5rem;
   font-size: 1.5rem;
   height: 2rem;
+  padding: 0.25rem;
 }
 
-button{
+button {
   font-size: 1rem;
   background-color: var(--primary-Color);
   padding: 0.75rem 1rem;
   color: white;
-  border-color:var(--primary-Color);
+  border-color: var(--primary-Color);
   border-radius: 0.5rem;
   border-style: none;
   display: block;
@@ -54,13 +54,23 @@ table {
   justify-content: center;
 }
 
-footer{
+footer {
   margin-top: 4rem;
 }
 
-footer li
-{
+footer div{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+footer li {
   list-style: none;
   display: inline-block;
   margin-right: 1rem;
+}
+
+footer img {
+  max-width: 2rem;
+  max-height: 2rem;
 }

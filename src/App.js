@@ -1,5 +1,8 @@
 import { useState } from "react";
 import "./styles.css";
+import githubImage from './images/github.png';
+import instagramImage from './images/instagram.png';
+import twitterImage from './images/twitter.png';
 
 export default function App() {
   var [billAmount, setBillAmount] = useState(0);
@@ -68,26 +71,27 @@ export default function App() {
             disabled={isBillEmpty}
             onChange={onCashAmountChange}
             class="input-field"
-       ></input>
+          ></input>
 
           <button onClick={onCheck}>Check</button>
 
           <h2>Return Change</h2>
 
-          <ChangeTable returnAmounts={returnChange} />  
+          <ChangeTable returnAmounts={returnChange} />
         </div>
 
         <footer>
-          <p>
-           2023 | soumya ripan
-          </p>
+          <div>
+            <p>
+              soumya ripan
+            </p>
 
-          <ul>
-            <li><a href="/"><img src="images/github.png" alt="github"></img></a></li>
-            <li><a href="/"><img src="images/instagram.png" alt="instagram"></img></a></li>
-            <li><a href="/"><img src="images/twitter.png" alt="twitter"></img></a></li>
-          </ul>
-
+            <ul>
+              <li><a href="/"><img src={githubImage} alt="github" /></a></li>
+              <li><a href="/"><img src={instagramImage} alt="instagram"></img></a></li>
+              <li><a href="/"><img src={twitterImage} alt="twitter"></img></a></li>
+            </ul>
+          </div>
         </footer>
 
       </div>
@@ -98,30 +102,30 @@ export default function App() {
 function ChangeTable(props) {
   return (
     <div class="table-parent">
-    <table>
-      <tr>
-        <td class="table-cell">No of Notes</td>
-        <td class="table-cell">{props.returnAmounts[0]}</td>
-        <td class="table-cell">{props.returnAmounts[1]}</td>
-        <td class="table-cell">{props.returnAmounts[2]}</td>
-        <td class="table-cell">{props.returnAmounts[3]}</td>
-        <td class="table-cell">{props.returnAmounts[4]}</td>
-        <td class="table-cell">{props.returnAmounts[5]}</td>
-        <td class="table-cell">{props.returnAmounts[6]}</td>
-        <td class="table-cell">{props.returnAmounts[7]}</td>
-      </tr>
-      <tr>
-        <td class="table-cell">Note</td>
-        <td class="table-cell">2000</td>
-        <td class="table-cell">500</td>
-        <td class="table-cell">100</td>
-        <td class="table-cell">50</td>
-        <td class="table-cell">20</td>
-        <td class="table-cell">10</td>
-        <td class="table-cell">5</td>
-        <td class="table-cell">1</td>
-      </tr>
-    </table>
+      <table>
+        <tr>
+          <td class="table-cell">No of Notes</td>
+          <td class="table-cell">{props.returnAmounts[0]}</td>
+          <td class="table-cell">{props.returnAmounts[1]}</td>
+          <td class="table-cell">{props.returnAmounts[2]}</td>
+          <td class="table-cell">{props.returnAmounts[3]}</td>
+          <td class="table-cell">{props.returnAmounts[4]}</td>
+          <td class="table-cell">{props.returnAmounts[5]}</td>
+          <td class="table-cell">{props.returnAmounts[6]}</td>
+          <td class="table-cell">{props.returnAmounts[7]}</td>
+        </tr>
+        <tr>
+          <td class="table-cell">Note</td>
+          <td class="table-cell">2000</td>
+          <td class="table-cell">500</td>
+          <td class="table-cell">100</td>
+          <td class="table-cell">50</td>
+          <td class="table-cell">20</td>
+          <td class="table-cell">10</td>
+          <td class="table-cell">5</td>
+          <td class="table-cell">1</td>
+        </tr>
+      </table>
     </div>
   );
 }
