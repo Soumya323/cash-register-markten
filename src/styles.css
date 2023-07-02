@@ -1,0 +1,17 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+:root {
+  --primary-Color: blue;
+}
+
+table {
+  border-collapse: collapse;
+}
+.table-cell {
+  border: solid grey;
+  padding: 1rem;
+  color: black;
+}
